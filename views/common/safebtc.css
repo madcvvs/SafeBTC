@@ -14,15 +14,18 @@ body {
     color: #455A64;
 }
 
-input               {
-  font-size:18px;
-  padding:10px 10px 10px 0px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 0px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
 }
-input:focus         { outline:none; }
+
+input:focus {
+    outline: none;
+}
 
 
 html {
@@ -30,11 +33,15 @@ html {
     font-size: 10px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body, ul, li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -43,7 +50,13 @@ li {
     list-style: none;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
 }
 
