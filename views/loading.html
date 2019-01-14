@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js%22%3E</script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
     <style>
         .loader {
-  border: 16px solid #f3f3f3; /* Light grey /
-  border-top: 16px solid orange; / Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
+            border: 16px solid #f3f3f3; /* Light grey /
+            border-top: 16px solid orange; / Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
-</head>
+
 <body>
 
     <div class="circle-loader">
@@ -34,12 +36,14 @@
     <button onclick="JSalert()">Show an Alert</button>
 
     <script type="text/javascript">
-    function JSalert(){
-        swal({icon: "success",});
-    }
+        function JSalert() {
+            swal({
+                icon: "success",
+            });
+        }
     </script>
 
 
 </body>
-</html>
 
+</html>
