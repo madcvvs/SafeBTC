@@ -14,6 +14,11 @@ app.get("/common/safebtc.css", function(req, res) {
   res.sendfile( __dirname + "/views/common/safebtc.css");
 });
 
+app.post("/common/loading", function(req, res) { 
+  console.log('static file request : ' + req.params);
+  res.sendfile( __dirname + "/views/loading.html");
+});
+
 app.get("/common/transaction", function(req, res) { 
   res.send("403");
 });
