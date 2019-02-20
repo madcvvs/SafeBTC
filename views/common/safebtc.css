@@ -103,11 +103,11 @@ hr {
     vertical-align: middle;
 }
 
-#orange {
+.orange {
     display: inline;
     color: orange;
 }
-#black {
+.black {
     display: inline;
     color: black;
 }

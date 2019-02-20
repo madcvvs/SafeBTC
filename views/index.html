@@ -15,7 +15,7 @@
         <div class="container">
 
             <div class="demo-flex-spacer"></div>
-            <h1>Safe<span id="orange">BTC</span></h1>
+            <h1>Safe<span class="orange">BTC</span></h1>
             <hr>
             <div class="webflow-style-input">
                 <input id="address" type="text" placeholder="What's your BTC address?">
@@ -23,9 +23,9 @@
             </div>
 
             <div class="demo-flex-spacer">
-            <h3> <a href="#" id="black">About</a> | <a href="#"><span id="black">How</span> <span id="black">i</span><span id="orange">t</span> <span id="orange">Works</span></a> | <a href="#"><span id="orange">Why</span> <span id="orange">us</span></a></h3>
+            <h3> <a href="#" class="black" id="About">About</a> | <a href="#"><span class="black">How</span> <span class="black">i</span><span class="orange">t</span> <span class="orange">Works</span></a> | <a href="#"><span class="orange">Why</span> <span class="orange">us</span></a></h3>
             </div>
-            <div class="container-undertext">
+            <div class="container-undertext" id="undertext">
                 <p>testsets etsettestsetsetsettest setsetsettestsetsetsettests etsetsettestsetsets ettestsetsetsettestsetsetsettestsetsetsettestsetsetsettestsetsetset</p>
             </div>
         </div>
@@ -53,6 +53,14 @@
         });
     });
     
+
+    $( "#About" ).hover(
+  function() {
+    $( "#undertext" ).append( $( "<span> ***</span>" ) );
+  }, function() {
+    $( "#undertext" ).find( "span:last" ).remove();
+  }
+);
     
     </script>
 </body>
