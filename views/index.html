@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="safebtc.png">
     <link rel="stylesheet" type="text/css" media="screen" href="safebtc.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <form action="common/loading" method="post">
@@ -21,12 +22,38 @@
                 <button type="submit"><i class="icon ion-android-arrow-forward"></i></button>
             </div>
 
-            <div class="demo-flex-spacer"></div>
+            <div class="demo-flex-spacer">
             <h3> <a href="#" id="black">About</a> | <a href="#"><span id="black">How</span> <span id="black">i</span><span id="orange">t</span> <span id="orange">Works</span></a> | <a href="#"><span id="orange">Why</span> <span id="orange">us</span></a></h3>
-          </div>
+            </div>
+            <div class="container-undertext">
+                <p>testsets etsettestsetsetsettest setsetsettestsetsetsettests etsetsettestsetsets ettestsetsetsettestsetsetsettestsetsetsettestsetsetsettestsetsetset</p>
+            </div>
+        </div>
+          
+
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="notify.min.js"></script>
     <script src="safebtc.js"></script>
+    <script>
+    $(function() {
+        var message = "Don't forget about us";
+        var original;
+
+        $(window).focus(function() {
+            if (original) {
+                document.title = original;
+            }
+        }).blur(function() {
+            var title = $('title').text();
+            if (title != message) {
+                original = title;
+            }
+            document.title = message;
+        });
+    });
+    
+    
+    </script>
 </body>
 </html>

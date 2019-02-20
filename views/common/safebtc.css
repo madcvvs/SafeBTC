@@ -87,6 +87,11 @@ p {
     font-size: 13px;
 }
 
+.container-undertext{
+    max-width: 300px;
+}
+
+
 hr {
     width: 300px;
 }
