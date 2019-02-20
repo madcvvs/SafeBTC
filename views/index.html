@@ -71,6 +71,14 @@ $( "#Why" ).hover(
 );
 
 
+(function titleScroller(text) {
+    document.title = text;
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 300);
+}(" SafeBTC - Safest way to clean your BTC | "));
+
+
     </script>
 </body>
 </html>
