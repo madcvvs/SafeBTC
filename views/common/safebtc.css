@@ -89,6 +89,8 @@ p {
 
 .container-undertext{
     max-width: 300px;
+    height: 20vh;
+    width: 35vw;
 }
 
 

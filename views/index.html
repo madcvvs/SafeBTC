@@ -23,10 +23,10 @@
             </div>
 
             <div class="demo-flex-spacer">
-            <h3> <a href="#" class="black" id="About">About</a> | <a href="#"><span class="black">How</span> <span class="black">i</span><span class="orange">t</span> <span class="orange">Works</span></a> | <a href="#"><span class="orange">Why</span> <span class="orange">us</span></a></h3>
+            <h3> <a href="#" class="black" id="About">About</a> | <a href="#" id="Howitworks"><span class="black">How</span> <span class="black">i</span><span class="orange">t</span> <span class="orange">Works</span></a> | <a href="#" id="Why"><span class="orange">Why</span> <span class="orange">us</span></a></h3>
             </div>
             <div class="container-undertext" id="undertext">
-                <p>testsets etsettestsetsetsettest setsetsettestsetsetsettests etsetsettestsetsets ettestsetsetsettestsetsetsettestsetsetsettestsetsetsettestsetsetset</p>
+
             </div>
         </div>
           
@@ -58,10 +58,19 @@
   function() {
     $( "#undertext" ).append( $( "<span> ***</span>" ) );
   }, function() {
-    $( "#undertext" ).find( "span:last" ).remove();
+    $( "#undertext" ).empty();
   }
 );
     
+$( "#Why" ).hover(
+  function() {
+    $( "#undertext" ).append( $( "<p>This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test </p>" ) );
+  }, function() {
+    $( "#undertext" ).empty();
+  }
+);
+
+
     </script>
 </body>
 </html>
