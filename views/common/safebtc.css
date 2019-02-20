@@ -102,6 +102,10 @@ hr {
     display: inline;
     color: orange;
 }
+#black {
+    display: inline;
+    color: black;
+}
 
 [data-notify="progressbar"] {
 	margin-bottom: 0px;
