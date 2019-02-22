@@ -38,17 +38,10 @@
     <script>
     $(function() {
         var message = "Don't forget about us";
-        var original;
 
         $(window).focus(function() {
-            if (original) {
-                document.title = original;
-            }
+                scrolltitle();
         }).blur(function() {
-            var title = $('title').text();
-            if (title != message) {
-                original = title;
-            }
             document.title = message;
         });
     });
@@ -71,14 +64,15 @@ $( "#Why" ).hover(
 );
 
 
-(function titleScroller(text) {
-    document.title = text;
-    setTimeout(function () {
-        titleScroller(text.substr(1) + text.substr(0, 1));
-    }, 300);
-}(" SafeBTC - Safest way to clean your BTC | "));
 
-
+title = "SafeBTC - Safest way to clean your BTC";
+position = 0;
+function scrolltitle() {
+    document.title = title.substring(position, title.length) + title.substring(0, position); 
+    position++;
+    if (position > title.length) position = 0;
+    titleScroll = window.setTimeout(scrolltitle,170);
+}
     </script>
 </body>
 </html>
