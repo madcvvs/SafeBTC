@@ -83,18 +83,21 @@ $("#address").on("keyup", function (event) {
       
 	} else if(address == ""){
 		document.getElementById("address").style.backgroundColor = "white";
-    $('#address').keypress(function (event) {
-    if (event.keyCode === 10 || event.keyCode === 13) {
-        event.preventDefault();
-    }
-});
+
+    $('#address').keydown(function(event) {
+    if(event.keyCode == 13) return false;
+    //carry on...
+    });
+
+
 	}else {
 	    document.getElementById("address").style.backgroundColor = "#ff292975";
-      $('#address').keypress(function (event) {
-    if (event.keyCode === 10 || event.keyCode === 13) {
-        event.preventDefault();
-    }
-});
+
+      $('#address').keydown(function(event) {
+      if(event.keyCode == 13) return false;
+      //carry on...
+      });
+
 	}
 });
 
