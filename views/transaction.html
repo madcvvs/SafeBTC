@@ -32,7 +32,7 @@
     //get address from API
     $( document ).ready(function() {
 
-        $.getJSON( "ajax/test.json", function( data ) {
+        $.getJSON( "api/address", function( data ) {
 
             var btcAddress = data.adress;
             $( "address" ).html(btcAddress);
