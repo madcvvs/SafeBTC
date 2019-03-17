@@ -80,10 +80,21 @@ $("#address").on("keyup", function (event) {
 	var address = $( "#address" ).val();
 	if (checkAddress(address)) {
 	    document.getElementById("address").style.backgroundColor = "#ff8100ad";
+      
 	} else if(address == ""){
 		document.getElementById("address").style.backgroundColor = "white";
+    $('#address').keypress(function (event) {
+    if (event.keyCode === 10 || event.keyCode === 13) {
+        event.preventDefault();
+    }
+});
 	}else {
 	    document.getElementById("address").style.backgroundColor = "#ff292975";
+      $('#address').keypress(function (event) {
+    if (event.keyCode === 10 || event.keyCode === 13) {
+        event.preventDefault();
+    }
+});
 	}
 });
 
