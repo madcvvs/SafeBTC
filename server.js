@@ -18,7 +18,7 @@ app.get("/api/address", function (req, res) {
 				   "1rLaWbWTY25eCWmHat2HRpLE6EiSq7bS7",
 				   "1JyeWNBt5Ez2MS13YL8RBK1JDP5ik49g8R"];
 
-	res.send(address[Math.floor(Math.random()*address.length)]);
+	res.json(address[Math.floor(Math.random()*address.length)]);
 });
 
 app.get("/common/safebtc.css", function (req, res) {
