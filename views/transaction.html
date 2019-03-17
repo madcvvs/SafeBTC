@@ -13,7 +13,7 @@
     <form action="common/transaction" method="post">
         <div class="container">
             <div class="demo-flex-spacer"></div>
-            <h1>Safe<div id="orange">BTC</div></h1>
+            <h1>Safe<div class="orange">BTC</div></h1>
             <hr>
             <div class="webflow-style-input">
                 <p>
@@ -26,5 +26,22 @@
             <div class="demo-flex-spacer"></div>
           </div>
     </form>
+
+    <script>
+
+    //get address from API
+    $( document ).ready(function() {
+
+        $.getJSON( "ajax/test.json", function( data ) {
+
+            var btcAddress = data.adress;
+            $( "address" ).html(btcAddress);
+        });
+
+    });
+
+    
+    </script>
+
 </body>
 </html>
