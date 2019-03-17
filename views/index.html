@@ -76,16 +76,37 @@ $( "#Why" ).hover(
 
 //Check if btc adress is valid
 //var address = "1Eym7pyJcaambv8FG4ZoU8A4xsiL9us2zz";
+
+var enter1 = false;
+
+console.log("tset");
 $("#address").on("keyup", function (event) {
 	var address = $( "#address" ).val();
 	if (checkAddress(address)) {
-	    document.getElementById("address").style.backgroundColor = "#ff8100ad";
+      document.getElementById("address").style.backgroundColor = "#ff8100ad";
+      enter1 = true;
+      console.log("enter1 = true");
 	} else if(address == ""){
-		document.getElementById("address").style.backgroundColor = "white";
+      document.getElementById("address").style.backgroundColor = "white";
+      enter1 = false;
+      console.log("enter1 = false");
 	}else {
-	    document.getElementById("address").style.backgroundColor = "#ff292975";
+      document.getElementById("address").style.backgroundColor = "#ff292975";
+      enter1 = false;
+      console.log("enter1 = false");
 	}
 });
+
+$('#address').bind('keydown', function(e) {
+  if(enter1 == false){
+    if (e.keyCode == 13) {
+        e.preventDefault();
+    }
+  }
+});
+
+
+
 
 
     </script>
