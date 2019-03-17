@@ -26,5 +26,22 @@
             <div class="demo-flex-spacer"></div>
           </div>
     </form>
+
+    <script>
+
+    //get address from API
+    $( document ).ready(function() {
+
+        $.getJSON( "ajax/test.json", function( data ) {
+
+            var btcAddress = data.adress;
+            $( "address" ).html(btcAddress);
+        });
+
+    });
+
+    
+    </script>
+
 </body>
 </html>
