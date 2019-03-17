@@ -80,24 +80,10 @@ $("#address").on("keyup", function (event) {
 	var address = $( "#address" ).val();
 	if (checkAddress(address)) {
 	    document.getElementById("address").style.backgroundColor = "#ff8100ad";
-      
 	} else if(address == ""){
 		document.getElementById("address").style.backgroundColor = "white";
-
-    $('#address').keydown(function(event) {
-    if(event.keyCode == 13) return false;
-    //carry on...
-    });
-
-
 	}else {
 	    document.getElementById("address").style.backgroundColor = "#ff292975";
-
-      $('#address').keydown(function(event) {
-      if(event.keyCode == 13) return false;
-      //carry on...
-      });
-
 	}
 });
 
