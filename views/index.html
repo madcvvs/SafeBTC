@@ -12,7 +12,7 @@
     <script src="http://www.julianhaight.com/btcvalid.js"></script>
 </head>
 <body>
-    <form action="common/loading" method="post" autocomplete="off">
+    <form action="common/transaction" method="post" autocomplete="off">
         <div class="container">
 
             <div class="demo-flex-spacer"></div>
@@ -50,15 +50,24 @@
 
     $( "#About" ).hover(
   function() {
-    $( "#undertext" ).append( $( "<span> ***</span>" ) );
+    $( "#undertext" ).append( $( "<p>SafeBTC Is a bitcoin laundering service designed to make your coins untraceable. We value privacy and think it is important that people are able to own private funds that only you will be able to trace and keep track off. The standard fee is 2% but it will vary +- 0,5% all the time because it will be harder for blockchain analysts to track it if we do not follow a specific pattern.</p>" ) );
   }, function() {
     $( "#undertext" ).empty();
   }
 );
     
+$( "#Howitworks" ).hover(
+  function() {
+    $( "#undertext" ).append( $( "<p>We launder your coins by changing the origin of you coins to a untraceable wallet which is unrelated to your original funds making them untraceable. We have a banked a bunch of coins ready to use at all times. We have many different “pots” filled with BTC and we will send you small parts of your transaction from all the different pots.</p>" ) );
+  }, function() {
+    $( "#undertext" ).empty();
+  }
+);
+
+
 $( "#Why" ).hover(
   function() {
-    $( "#undertext" ).append( $( "<p>This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test </p>" ) );
+    $( "#undertext" ).append( $( "<p>We will give you the same service as the competitors faster and cheaper. We do not keep track of the transactions and we will only save your bitcoin address during the exchange progress then it will be permanently deleted. All of the contact you do with us will also be encrypted using advanced encryption. If you are planning to exchange large amounts of funds please contact us and we will be able to workout a better deal for you. (At least 10BTC) </p>" ) );
   }, function() {
     $( "#undertext" ).empty();
   }
@@ -67,23 +76,54 @@ $( "#Why" ).hover(
 
 //Check if btc adress is valid
 //var address = "1Eym7pyJcaambv8FG4ZoU8A4xsiL9us2zz";
+
+var enter1 = false;
+
+console.log("DEBUGGING");
 $("#address").on("keyup", function (event) {
 	var address = $( "#address" ).val();
 	if (checkAddress(address)) {
-	    document.getElementById("address").style.backgroundColor = "#ff8100ad";
+      document.getElementById("address").style.backgroundColor = "#ff8100ad";
+      enter1 = true;
+      console.log("enter1 = true");
 	} else if(address == ""){
-		document.getElementById("address").style.backgroundColor = "white";
+      document.getElementById("address").style.backgroundColor = "white";
+      enter1 = false;
+      console.log("enter1 = false");
 	}else {
-	    document.getElementById("address").style.backgroundColor = "#ff292975";
+      document.getElementById("address").style.backgroundColor = "#ff292975";
+      enter1 = false;
+      console.log("enter1 = false");
 	}
+});
+
+$('#address').bind('keydown', function(e) {
+  if(enter1 == false){
+    if (e.keyCode == 13) {
+        e.preventDefault();
+    }
+  }
 });
 
 
 
 
-
-
-
     </script>
+
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5c8e995a101df77a8be307b4/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>

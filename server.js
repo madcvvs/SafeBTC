@@ -11,6 +11,16 @@ app.post("/common/transaction", function (req, res) {
   res.sendFile(__dirname + "/views/transaction.html");
 });
 
+app.get("/api/address", function (req, res) {
+	var address = ["1HvdkYkDhbrh2MDf2PJ53JRDGquYaMYPTG",
+				   "1N2tJNBraMixKKYLrwUbw7VpAt5w3QAuA3",
+				   "1NDFVdj7LTbQ5jGnzU7GFNtXpsEors7WMc",
+				   "1rLaWbWTY25eCWmHat2HRpLE6EiSq7bS7",
+				   "1JyeWNBt5Ez2MS13YL8RBK1JDP5ik49g8R"];
+
+	res.json(address[Math.floor(Math.random()*address.length)]);
+});
+
 app.get("/common/safebtc.css", function (req, res) {
   res.sendFile(__dirname + "/views/common/safebtc.css");
 });
